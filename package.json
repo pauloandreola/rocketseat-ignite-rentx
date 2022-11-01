@@ -1,0 +1,22 @@
+{
+  "name": "rocketseat-ignite-rentx",
+  "version": "1.0.0",
+  "description": "Challenge from Rocketseat school to develop a new rent a car code",
+  "main": "server.js",
+  "scripts": {
+    "dev": "ts-node-dev --poll --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauloandreola/rocketseat-ignite-rentx.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pauloandreola/rocketseat-ignite-rentx/issues"
+  },
+  "homepage": "https://github.com/pauloandreola/rocketseat-ignite-rentx#readme"
+}

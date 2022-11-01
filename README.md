@@ -6,16 +6,11 @@ Dentro do VS Code
 *Via console
 
 npm init -y
-npm i 
-	express
-	typescript -D
-	@types/express -D
-	tsc -D
+npm i express
+npm i -D typescript tsc ts-node-dev @types/express @types/ts-node-dev 
 npx tsc --init (Gera o arquivo tsconfig.sjon)
 
-npm i ts-node-dev -D
-
-Configurar script no package.json "dev": "ts-node-dev --transpile-only --ignore-watch node-modules --respawn src/server.ts"
+Configurar script no package.json "dev": "ts-node-dev --poll --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
 
 *Via console
 
@@ -186,7 +181,7 @@ Construção das rotas
 
 Primeiro - Criar o repositório (Repository)
 Segundo - Criar o controlador (Controller)
-Terceiro - Criar o caso de uso (UseCase)
+Terceiro - Criar o caso de uso (UseCase) - Regras do negócio
 
 **************
 
