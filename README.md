@@ -6,8 +6,8 @@ Dentro do VS Code
 *Via console
 
 npm init -y
-npm i express
-npm i -D typescript tsc ts-node-dev @types/express @types/ts-node-dev 
+npm i bcryptjs csv-parse express express-async-errors jsonwebtoken multer pg reflect-metadata ts-node swagger-ui-express tsyringe typeorm uuid 
+npm i -D eslint eslint-config-airbnb-base eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-import-helpers eslint-plugin-prettier jest prettier ts-jest ts-node ts-node-dev tsconfig-paths typescript @types/bcryptjs @types/express @types/jest @types/jsonwebtoken @types/mocha @types/node @types/swagger-ui-express @types/uuid @typescript-eslint/eslint-plugin @typescript-eslint/parser
 npx tsc --init (Gera o arquivo tsconfig.sjon)
 
 Configurar script no package.json "dev": "ts-node-dev --poll --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
