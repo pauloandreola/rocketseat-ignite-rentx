@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import "reflect-metadata";
 import express = require("express");
-import swaggerUi = require("swagger-ui-express");
+// import swaggerUi = require("swagger-ui-express");
 
 // import './database';
 
