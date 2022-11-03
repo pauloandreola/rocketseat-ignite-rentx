@@ -1,14 +1,14 @@
 /* eslint-disable no-console */
 import "reflect-metadata";
 import express = require("express");
-// import swaggerUi = require("swagger-ui-express");
+import swaggerUi = require("swagger-ui-express");
 
 // import './database';
 
 // import "./shared/container";
 
 import { router } from "./routes";
-// import swaggerFile from "./swagger.json";
+import swaggerFile from "./swagger.json";
 // import { NextFunction, Request, Response } from "express";
 import "express-async-errors";
 // import { AppError } from "./errors/AppError";
@@ -17,7 +17,7 @@ const port = 3000;
 
 app.use(express.json());
 
-// app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.use(router);
 
