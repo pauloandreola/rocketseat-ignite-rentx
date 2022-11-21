@@ -19,10 +19,10 @@ services:
     container_name: rentx
     restart: always
     ports:
-      - 3333:3333
+      - 3000:3000
       - 9229:9229
     volumes:
-      - .:/usr/app
+      - .:/var/rentx
     links:
       - database
     depends_on:
