@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import { Router } from "express";
-// import { authenticateRoutes } from "./authenticate.routes";
+import { authenticateRoutes } from "./authenticate.routes";
 // import { categoriesRoutes } from  "./categories.routes";
 // import { specificationsRoutes } from "./specifications.routes";
 // eslint-disable-next-line import/no-unresolved
@@ -8,7 +8,7 @@ import { Router } from "express";
 
 export const router = Router();
 
-// router.use(authenticateRoutes);
+router.use(authenticateRoutes);
 // router.use("/cars", carsRoutes);
 // router.use("/cars_image", cars_imageRoutes);
 // router.use("/categories", categoriesRoutes);
