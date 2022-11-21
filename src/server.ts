@@ -33,5 +33,5 @@ app.use(router);
 //   });
 // });
 
-app.listen(port, () => console.log("Server is running port ->", port));
+app.listen(() => console.log(`Server is running port -> ${port}`));
 // console.log('Server is running port -> ', port);
