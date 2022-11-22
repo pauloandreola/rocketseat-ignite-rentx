@@ -1,9 +1,9 @@
 /* eslint-disable no-useless-constructor */
 /* eslint-disable import/prefer-default-export */
-import { inject, injectable } from "tsyringe";
-import { deleteFile } from "../../../../utils/file";
+import { inject, injectable } from 'tsyringe';
+import { deleteFile } from '../../../../utils/file';
 
-import { IUsersRepository } from "../../repositories/IUsersRepository";
+import { IUsersRepository } from '../../repositories/IUsersRepository';
 
 interface IRequest {
   userId: string;
@@ -13,7 +13,7 @@ interface IRequest {
 @injectable()
 export class UpdateUserAvatarUseCase {
   constructor(
-    @inject("usersRepository") private UsersRepository: IUsersRepository,
+    @inject('usersRepository') private UsersRepository: IUsersRepository,
   ) {}
 
   async execute({ userId, avatarFile }: IRequest): Promise<void> {

@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
-import { Router } from "express";
-import { authenticateRoutes } from "./authenticate.routes";
+import { Router } from 'express';
+import { authenticateRoutes } from './authenticate.routes';
 // import { categoriesRoutes } from  "./categories.routes";
 // import { specificationsRoutes } from "./specifications.routes";
 // eslint-disable-next-line import/no-unresolved

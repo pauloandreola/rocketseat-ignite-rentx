@@ -1,19 +1,19 @@
 /* eslint-disable no-console */
 
-import "reflect-metadata";
-import { DataSource } from "typeorm";
+import 'reflect-metadata';
+import { DataSource } from 'typeorm';
 
-import { User } from "../modules/accounts/entities/User";
+import { User } from '../modules/accounts/entities/User';
 // import { Category } from "../modules/cars/entities/Category"
 // import { Specification } from "../modules/cars/entities/Specification"
 
 export const AppDataSource = new DataSource({
-  type: "postgres",
-  host: "teste",
+  type: 'postgres',
+  host: 'teste',
   port: 5432,
-  username: "docker",
-  password: "1234",
-  database: "rentx",
+  username: 'docker',
+  password: '1234',
+  database: 'rentx',
   synchronize: true,
   logging: true,
   entities: [
@@ -21,11 +21,11 @@ export const AppDataSource = new DataSource({
     // Specification,
     User,
   ],
-  migrations: ["./src/database/migrations/*.ts"],
+  migrations: ['./src/database/migrations/*.ts'],
 });
 
 AppDataSource.initialize()
   .then(async () => {
-    console.log("Initializing the database...");
+    console.log('Initializing the database...');
   })
   .catch(err => console.log(err));
