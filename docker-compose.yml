@@ -22,7 +22,7 @@ services:
       - 3000:3000
       - 9229:9229
     volumes:
-      - .:/var/rentx
+      - .:/usr/app
     links:
       - database
     depends_on:
