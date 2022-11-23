@@ -1,5 +1,4 @@
 /* eslint-disable no-useless-constructor */
-/* eslint-disable import/prefer-default-export */
 import { inject, injectable } from 'tsyringe';
 import { hash } from 'bcryptjs';
 import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';

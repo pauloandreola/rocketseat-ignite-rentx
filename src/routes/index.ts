@@ -3,8 +3,7 @@ import { Router } from 'express';
 import { authenticateRoutes } from './authenticate.routes';
 // import { categoriesRoutes } from  "./categories.routes";
 // import { specificationsRoutes } from "./specifications.routes";
-// eslint-disable-next-line import/no-unresolved
-// import { usersRoutes } from "./users.routes";
+import { usersRoutes } from './users.routes';
 
 export const router = Router();
 
@@ -15,4 +14,4 @@ router.use(authenticateRoutes);
 // router.use("/rentals", rentalsRoutes);
 // router.use("/specifications", specificationsRoutes);
 // router.use("/specifications_cars", specifications_carsRoutes);
-// router.use("/users", usersRoutes);
+router.use('/users', usersRoutes);
