@@ -3,7 +3,7 @@ import 'reflect-metadata';
 import express = require('express');
 import swaggerUi = require('swagger-ui-express');
 
-// import './database';
+import './database/data-source';
 
 import './shared/container';
 
