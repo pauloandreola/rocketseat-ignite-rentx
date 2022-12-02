@@ -2,7 +2,7 @@ import { v4 as uuidV4 } from 'uuid';
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity('users')
-class User {
+export class User {
   @PrimaryColumn()
   id: string;
 
@@ -33,6 +33,3 @@ class User {
     }
   }
 }
-
-// eslint-disable-next-line import/prefer-default-export
-export { User };
