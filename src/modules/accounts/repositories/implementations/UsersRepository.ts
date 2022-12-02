@@ -42,4 +42,14 @@ export class UsersRepository implements IUsersRepository {
     const user = await this.repository.findOneBy({ id });
     return user;
   }
+
+  async findByName(name: string): Promise<User> {
+    const user = await this.repository.findOneBy({ name });
+    return user;
+  }
+
+  async list(): Promise<User[]> {
+    const users = await this.repository.find();
+    return users;
+  }
 }
