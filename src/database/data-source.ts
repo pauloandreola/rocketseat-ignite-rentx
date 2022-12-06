@@ -8,7 +8,7 @@ import { User } from '../modules/accounts/entities/User';
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
-  host: '172.25.0.2',
+  host: '172.19.0.2',
   port: 5432,
   username: 'docker',
   password: 'ignite',
