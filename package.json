@@ -9,7 +9,7 @@
 
     "create": "typeorm migration:create ./src/migration/learningMigration",
     "generate": "typeorm migration:generate -n PostRefactoring",
-    "migrate": "npx typeorm-ts-node-commonjs migration:run -d src/data-source", 
+    "migrate": "ts-node-dev ./node_modules/typeorm/cli.js migration:run -d src/data-source", 
     "revert": "npx typeorm-ts-node-commonjs migration:revert -d src/data-source",
 
     "test": "jest"
