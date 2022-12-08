@@ -6,6 +6,12 @@
   "scripts": {
     "dev": "ts-node-dev --poll --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js -d src/database/data-source.ts",
+
+    "create": "typeorm migration:create ./src/migration/learningMigration",
+    "generate": "typeorm migration:generate -n PostRefactoring",
+    "migrate": "npx typeorm-ts-node-commonjs migration:run -d src/data-source", 
+    "revert": "npx typeorm-ts-node-commonjs migration:revert -d src/data-source",
+
     "test": "jest"
   },
   "repository": {
@@ -30,7 +36,7 @@
     "reflect-metadata": "^0.1.13",
     "swagger-ui-express": "^4.5.0",
     "tsyringe": "^4.7.0",
-    "typeorm": "^0.3.10",
+    "typeorm": "^0.3.11",
     "uuid": "^9.0.0",
     "yarn": "^1.22.19"
   },

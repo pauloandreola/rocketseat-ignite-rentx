@@ -1,6 +1,6 @@
 FROM node
 
-WORKDIR /usr/app
+WORKDIR /usr/apprentx
 
 COPY  package.json ./
 

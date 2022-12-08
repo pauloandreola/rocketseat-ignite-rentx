@@ -23,7 +23,7 @@ services:
       - 3001:3001
       - 9300:9300
     volumes:
-      - .:/usr/app
+      - .:/usr/apprentx
     links:
       - database
     depends_on:
