@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { Router } from 'express';
 import multer from 'multer';
 
