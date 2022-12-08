@@ -2,13 +2,17 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 
-import { User } from '../modules/accounts/entities/User';
-// import { Category } from "../modules/cars/entities/Category"
-// import { Specification } from "../modules/cars/entities/Specification"
+import { User } from '../modules/accounts/entities/user';
+import { Car } from '../modules/cars/entities/car';
+import { CarImage } from '../modules/cars/entities/carImage';
+import { Category } from '../modules/cars/entities/category';
+import { Rental } from '../modules/cars/entities/rental';
+import { Specification } from '../modules/cars/entities/specification';
+import { SpecificationCar } from '../modules/cars/entities/specificationCar';
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
-  host: '172.19.0.2',
+  host: 'localhost',
   port: 5432,
   username: 'docker',
   password: 'ignite',
@@ -16,8 +20,12 @@ export const AppDataSource = new DataSource({
   synchronize: true,
   logging: true,
   entities: [
-    // Category,
-    // Specification,
+    Car,
+    CarImage,
+    Category,
+    Rental,
+    Specification,
+    SpecificationCar,
     User,
   ],
   migrations: ['./src/database/migrations/*.ts'],
