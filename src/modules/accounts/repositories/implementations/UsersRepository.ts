@@ -3,7 +3,7 @@ import { Repository } from 'typeorm';
 import { AppDataSource } from '../../../../database/data-source';
 
 import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
-import { User } from '../../entities/User';
+import { User } from '../../entities/user';
 import { IUsersRepository } from '../IUsersRepository';
 
 export class UsersRepository implements IUsersRepository {
@@ -18,16 +18,16 @@ export class UsersRepository implements IUsersRepository {
     email,
     driverLicense,
     password,
-    id,
     avatar,
+    id,
   }: ICreateUserDTO): Promise<void> {
     const user = this.repository.create({
       name,
       email,
       driverLicense,
       password,
-      id,
       avatar,
+      id,
     });
 
     await this.repository.save(user);
