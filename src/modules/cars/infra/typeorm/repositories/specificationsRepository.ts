@@ -1,9 +1,9 @@
 /* eslint-disable class-methods-use-this */
 import { Repository } from 'typeorm';
-import { AppDataSource } from '../../../../database/data-source';
-import { ICreateSpecificationDTO } from '../../dtos/ICreateSpecificationDTO';
-import { Specification } from '../../entities/specification';
-import { ISpecificationsRepository } from '../ISpecificationsRepository';
+import { AppDataSource } from '../../../../../shared/infra/typeorm/data-source';
+import { ICreateSpecificationDTO } from '../../../dtos/ICreateSpecificationDTO';
+import { Specification } from '../entities/specification';
+import { ISpecificationsRepository } from '../../../repositories/ISpecificationsRepository';
 
 export class SpecificationsRepository implements ISpecificationsRepository {
   private repository: Repository<Specification>;

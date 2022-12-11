@@ -1,8 +1,8 @@
 import { Repository } from 'typeorm';
-import { AppDataSource } from '../../../../database/data-source';
-import { ICreateCategoryDTO } from '../../dtos/ICreateCategoryDTO';
-import { Category } from '../../entities/category';
-import { ICategoriesRepository } from '../ICategoriesRepository';
+import { AppDataSource } from '../../../../../shared/infra/typeorm/data-source';
+import { ICreateCategoryDTO } from '../../../dtos/ICreateCategoryDTO';
+import { Category } from '../entities/category';
+import { ICategoriesRepository } from '../../../repositories/ICategoriesRepository';
 
 export class CategoriesRepository implements ICategoriesRepository {
   private repository: Repository<Category>;

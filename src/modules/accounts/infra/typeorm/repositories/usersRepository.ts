@@ -1,10 +1,10 @@
 /* eslint-disable import/prefer-default-export */
 import { Repository } from 'typeorm';
-import { AppDataSource } from '../../../../database/data-source';
+import { AppDataSource } from '../../../../../shared/infra/typeorm/data-source';
 
-import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
-import { User } from '../../entities/user';
-import { IUsersRepository } from '../IUsersRepository';
+import { ICreateUserDTO } from '../../../dtos/ICreateUserDTO';
+import { User } from '../entities/user';
+import { IUsersRepository } from '../../../repositories/IUsersRepository';
 
 export class UsersRepository implements IUsersRepository {
   private repository: Repository<User>;

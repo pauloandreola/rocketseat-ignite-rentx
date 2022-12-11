@@ -4,11 +4,11 @@ import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors';
 import swaggerUi from 'swagger-ui-express';
 
-import './shared/container';
+import '../typeorm/data-source';
 
 import { router } from './routes';
-import swaggerFile from './swagger.json';
-import { AppError } from './errors/appError';
+import swaggerFile from '../../../swagger.json';
+import { AppError } from '../../errors/appError';
 
 const app = express();
 const port = 3001;

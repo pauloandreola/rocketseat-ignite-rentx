@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-constructor */
 import { inject, injectable } from 'tsyringe';
-import { AppError } from '../../../../errors/appError';
+import { AppError } from '../../../../shared/errors/appError';
 import { ICreateCategoryDTO } from '../../dtos/ICreateCategoryDTO';
 import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
 

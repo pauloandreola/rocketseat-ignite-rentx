@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 import { ICreateCategoryDTO } from '../../dtos/ICreateCategoryDTO';
-import { Category } from '../../entities/category';
+import { Category } from '../../infra/typeorm/entities/category';
 import { ICategoriesRepository } from '../ICategoriesRepository';
 
 export class CategoriesRepositoryInMemory implements ICategoriesRepository {

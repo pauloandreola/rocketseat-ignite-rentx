@@ -2,13 +2,13 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 
-import { User } from '../modules/accounts/entities/user';
-import { Car } from '../modules/cars/entities/car';
-import { CarImage } from '../modules/cars/entities/carImage';
-import { Category } from '../modules/cars/entities/category';
-import { Rental } from '../modules/cars/entities/rental';
-import { Specification } from '../modules/cars/entities/specification';
-import { SpecificationCar } from '../modules/cars/entities/specificationCar';
+import { User } from '../../../modules/accounts/infra/typeorm/entities/user';
+import { Car } from '../../../modules/cars/infra/typeorm/entities/car';
+import { CarImage } from '../../../modules/cars/infra/typeorm/entities/carImage';
+import { Category } from '../../../modules/cars/infra/typeorm/entities/category';
+import { Rental } from '../../../modules/cars/infra/typeorm/entities/rental';
+import { Specification } from '../../../modules/cars/infra/typeorm/entities/specification';
+import { SpecificationCar } from '../../../modules/cars/infra/typeorm/entities/specificationCar';
 
 export const AppDataSource = new DataSource({
   type: 'postgres',

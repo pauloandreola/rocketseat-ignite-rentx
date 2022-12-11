@@ -4,7 +4,7 @@
   "description": "Challenge from Rocketseat school to develop a new rent a car code",
   "main": "server.ts",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn --poll src/server.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn --poll src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d src/database/data-source.ts",
 
     "create": "typeorm migration:create ./src/migration/learningMigration",

@@ -1,7 +1,6 @@
 /* eslint-disable no-shadow */
-import { allowedNodeEnvironmentFlags } from 'process';
 import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
-import { User } from '../../entities/user';
+import { User } from '../../infra/typeorm/entities/user';
 import { IUsersRepository } from '../IUsersRepository';
 
 export class UsersRepositoryInMemory implements IUsersRepository {
