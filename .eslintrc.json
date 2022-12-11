@@ -25,6 +25,10 @@
                     "ts": "never"
                 }
         ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            { "devDependencies": ["**/*.spec.js"] }
+        ],
         "prettier/prettier": "error",
         "import/prefer-default-export": "off",
         "camelcase": "off"
