@@ -1,4 +1,3 @@
-import { getMaxListeners } from 'process';
 import { AppError } from '../../../../errors/appError';
 import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
 import { UsersRepositoryInMemory } from '../../repositories/in-memory/usersRepositoryInMemory';
