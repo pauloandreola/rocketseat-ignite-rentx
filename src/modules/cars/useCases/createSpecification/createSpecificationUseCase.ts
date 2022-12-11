@@ -5,7 +5,7 @@ import { ICreateSpecificationDTO } from '../../dtos/ICreateSpecificationDTO';
 import { ISpecificationsRepository } from '../../repositories/ISpecificationsRepository';
 
 @injectable()
-export class CreateSpecificationsUseCase {
+export class CreateSpecificationUseCase {
   constructor(
     @inject('SpecificationsRepository')
     private specificationsRepository: ISpecificationsRepository,

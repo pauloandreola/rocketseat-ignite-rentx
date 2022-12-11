@@ -5,7 +5,7 @@ import { ICreateCategoryDTO } from '../../dtos/ICreateCategoryDTO';
 import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
 
 @injectable()
-export class CreateCategoriesUseCase {
+export class CreateCategoryUseCase {
   constructor(
     @inject('CategoriesRepository')
     private categoriesRepository: ICategoriesRepository,
