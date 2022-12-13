@@ -5,7 +5,7 @@ export interface IUsersRepository {
   create({
     name,
     email,
-    driverLicense,
+    driver_license,
     password,
   }: // avatar,
   ICreateUserDTO): Promise<void>;

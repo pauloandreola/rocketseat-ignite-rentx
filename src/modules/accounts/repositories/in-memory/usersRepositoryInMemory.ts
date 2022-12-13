@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 import { User } from '@modules/accounts/infra/typeorm/entities/user';
-import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
+import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
 import { IUsersRepository } from '../IUsersRepository';
 
 export class UsersRepositoryInMemory implements IUsersRepository {
@@ -9,12 +9,12 @@ export class UsersRepositoryInMemory implements IUsersRepository {
   async create({
     name,
     email,
-    driverLicense,
+    driver_license,
     password,
   }: ICreateUserDTO): Promise<void> {
     const user = new User();
 
-    Object.assign(user, { name, email, driverLicense, password });
+    Object.assign(user, { name, email, driver_license, password });
 
     this.users.push(user);
   }

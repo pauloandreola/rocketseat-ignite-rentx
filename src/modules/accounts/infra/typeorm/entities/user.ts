@@ -16,7 +16,7 @@ export class User {
   password: string;
 
   @Column()
-  driverLicense: string;
+  driver_license: string;
 
   @Column()
   isAdmin: boolean;

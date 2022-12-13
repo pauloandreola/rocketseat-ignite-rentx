@@ -16,7 +16,7 @@ export class UsersRepository implements IUsersRepository {
   async create({
     name,
     email,
-    driverLicense,
+    driver_license,
     password,
     avatar,
     id,
@@ -24,7 +24,7 @@ export class UsersRepository implements IUsersRepository {
     const user = this.repository.create({
       name,
       email,
-      driverLicense,
+      driver_license,
       password,
       avatar,
       id,
