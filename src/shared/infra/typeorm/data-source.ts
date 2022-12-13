@@ -28,7 +28,7 @@ export const AppDataSource = new DataSource({
     SpecificationCar,
     User,
   ],
-  migrations: ['./src/database/migrations/*.ts'],
+  migrations: ['./src/shared/infra/typeorm/migrations/*.ts'],
   subscribers: [],
 });
 
