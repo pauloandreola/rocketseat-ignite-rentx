@@ -5,7 +5,8 @@ import { CreateSpecificationController } from '@modules/cars/useCases/createSpec
 import { ImportSpecificationController } from '@modules/cars/useCases/importSpecification/importSpecificationController';
 import { ListSpecificationsController } from '@modules/cars/useCases/listSpecification/listSpecificationsController';
 
-import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
+import { ensureAuthenticated } from '@shared/infra/http/middlewares/ensureAuthenticated';
+import { ensureAdmin } from '@shared/infra/http/middlewares/ensureAdmin';
 
 export const specificationsRoutes = Router();
 
@@ -15,11 +16,21 @@ const createSpecificationController = new CreateSpecificationController();
 const importSpecificationController = new ImportSpecificationController();
 const listSpecificationsController = new ListSpecificationsController();
 
-specificationsRoutes.use(ensureAuthenticated);
-specificationsRoutes.post('/', createSpecificationController.handle);
+specificationsRoutes.post(
+  '/',
+  ensureAuthenticated,
+  ensureAdmin,
+  createSpecificationController.handle,
+);
+
 specificationsRoutes.get('/', listSpecificationsController.handle);
+
+specificationsRoutes.use(ensureAuthenticated);
+
 specificationsRoutes.post(
   '/import',
   upload.single('file'),
+  ensureAuthenticated,
+  ensureAdmin,
   importSpecificationController.handle,
 );
