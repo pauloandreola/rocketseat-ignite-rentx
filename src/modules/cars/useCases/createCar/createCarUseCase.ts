@@ -1,9 +1,9 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-useless-constructor */
-import { Car } from '@modules/cars/infra/typeorm/entities/car';
 import { ICarsRepository } from '@modules/cars/repositories/ICarsRepository';
-import { AppError } from '@shared/errors/appError';
 import { inject, injectable } from 'tsyringe';
+import { Car } from '../../infra/typeorm/entities/car';
+import { AppError } from '../../../../shared/errors/appError';
 
 interface IRequest {
   name: string;

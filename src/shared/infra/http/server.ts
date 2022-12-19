@@ -4,12 +4,16 @@ import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors';
 import swaggerUi from 'swagger-ui-express';
 
-import '../typeorm/data-source';
+import '@shared/infra/typeorm';
+
+import 'shared/container';
+import { AppError } from '@shared/errors/appError';
+// import { createConnection } from '@shared/infra/typeorm';
 
 import { router } from './routes';
 import swaggerFile from '../../../swagger.json';
-import { AppError } from '../../errors/appError';
 
+// createConnection();
 const app = express();
 const port = 3001;
 
@@ -34,4 +38,3 @@ app.use(
 );
 
 app.listen(() => console.log(`Server is running port -> ${port}`));
-// console.log('Server is running port -> ', port);

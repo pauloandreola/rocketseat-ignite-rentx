@@ -1,5 +1,5 @@
 /* eslint-disable no-shadow */
-import { Category } from '@modules/cars/infra/typeorm/entities/category';
+import { Category } from '../../infra/typeorm/entities/category';
 import { ICreateCategoryDTO } from '../../dtos/ICreateCategoryDTO';
 import { ICategoriesRepository } from '../ICategoriesRepository';
 

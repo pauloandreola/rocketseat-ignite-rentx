@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
-import { User } from '@modules/accounts/infra/typeorm/entities/user';
-import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
+import { User } from '../../infra/typeorm/entities/user';
+import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
 import { IUsersRepository } from '../IUsersRepository';
 
 export class UsersRepositoryInMemory implements IUsersRepository {
