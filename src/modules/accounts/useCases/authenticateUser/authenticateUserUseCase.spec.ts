@@ -1,4 +1,4 @@
-import { UsersRepositoryInMemory } from '@modules/accounts/repositories/in-memory/usersRepositoryInMemory';
+import { UsersRepositoryInMemory } from '../../repositories/in-memory/usersRepositoryInMemory';
 import { AppError } from '../../../../shared/errors/appError';
 import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
 import { CreateUserUseCase } from '../createUser/createUserUseCase';
