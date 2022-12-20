@@ -11,7 +11,7 @@
 - Não deve ser possível cadastrar um carro com uma placa já existente;
 <!-- - Não deve ser possível alterar a placa de uma carro já cadastrado; -->
 - O carro deve ser cadastrado, por padrão, com disponibilidade. (available);
--*** O usuário responsável pelo cadastro deve ser um usuário adminsitrador;
+-*** O usuário responsável pelo cadastro deve ser um usuário administrador;
 
 # Listagem de carros
 
@@ -27,7 +27,7 @@
 # Cadastro de Especificação no carro
 
 **RF**
-- Deve ser possível cadastrar uma especificfação para um carro;
+- Deve ser possível cadastrar uma especificação para um carro;
 <!-- - Deve ser possível listar todas as especificações
 - Deve ser possível listar todos os carros -->
 
@@ -49,9 +49,9 @@
 
 **RN**
 - O usuário deve poder cadastrar mais de uma imagem para o mesmo carro;
-- O usuário responsável pelo cadastro deve ser um usuário adminsitrador;
+- O usuário responsável pelo cadastro deve ser um usuário administrador;
 
-# Alugule de carro
+# Aluguel de carro
 
 **RF**
 - Deve ser possível cadastrar um aluguel
@@ -219,7 +219,7 @@ E dentro das `"rules"` adicione o trecho abaixo para que as importações de arq
 
 Instalação do Prettier
 
-Inicialmente se a extensão estiver instalada no VS Code deve ser desisntalada.
+Inicialmente se a extensão estiver instalada no VS Code deve ser desinstalada.
 
 O link abaixo está desatacado logo na sequência.
 
@@ -227,7 +227,7 @@ https://www.notion.so/Prettier-e2c6a3ec188c4cce8890a3e16a0d6425#da104f9b05964ec1
 
 npm i prettier eslint-config-prettier eslint-plugin-prettier -D
 
-Aqui abaixo começa a configuração do eslintrs.json e algum arquivos e procedimentos que devem ser configurados.
+Aqui abaixo começa a configuração do eslintrc.json e algum arquivos e procedimentos que devem ser configurados.
 ## Configuração
 
 O **Prettier** é mais uma ferramenta que vamos utilizar para ajudar na padronização de código, ele consiste em várias configurações que são feitas para que o código seja formatado para seguir um padrão.
