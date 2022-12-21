@@ -6,10 +6,17 @@ import { SpecificationsRepository } from '@modules/cars/infra/typeorm/repositori
 import { ISpecificationsRepository } from '@modules/cars/repositories/ISpecificationsRepository';
 import { CarsRepository } from '@modules/cars/infra/typeorm/repositories/carsRepository';
 import { ICarsRepository } from '@modules/cars/repositories/ICarsRepository';
-import { UsersRepository } from '../../modules/accounts/infra/typeorm/repositories/usersRepository';
-import { IUsersRepository } from '../../modules/accounts/repositories/IUsersRepository';
+import { CarsImagesRepository } from '@modules/cars/infra/typeorm/repositories/carsImagesRepository';
+import { ICarsImagesRepository } from '@modules/cars/repositories/ICarsImagesRepository';
+import { UsersRepository } from '@modules/accounts/infra/typeorm/repositories/usersRepository';
+import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepository';
 
 container.registerSingleton<ICarsRepository>('CarsRepository', CarsRepository);
+
+container.registerSingleton<ICarsImagesRepository>(
+  'CarsImagesRepository',
+  CarsImagesRepository,
+);
 
 container.registerSingleton<ICategoriesRepository>(
   'CategoriesRepository',
