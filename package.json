@@ -9,7 +9,7 @@
     "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts",
 
 
-    "typeorm create": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "create": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "generate": "typeorm migration:generate -n PostRefactoring",
     "migrate": "ts-node-dev ./node_modules/typeorm/cli.js migration:run -d src/shared/infra/typeorm/data-source.ts", 
     "revert": "npx typeorm-ts-node-commonjs migration:revert -d src/data-source",
