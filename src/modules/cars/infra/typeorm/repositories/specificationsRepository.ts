@@ -1,5 +1,5 @@
-/* eslint-disable class-methods-use-this */
 import { Repository } from 'typeorm';
+
 import { AppDataSource } from '../../../../../shared/infra/typeorm/data-source';
 import { ICreateSpecificationDTO } from '../../../dtos/ICreateSpecificationDTO';
 import { Specification } from '../entities/specification';

@@ -1,5 +1,5 @@
-/* eslint-disable no-useless-constructor */
 import { inject, injectable } from 'tsyringe';
+
 import { ICarsImagesRepository } from '@modules/cars/repositories/ICarsImagesRepository';
 
 interface IRequest {

@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-constructor */
 import { inject, injectable } from 'tsyringe';
 
 import { Rental } from '@modules/rentals/infra/typeorm/entities/rental';

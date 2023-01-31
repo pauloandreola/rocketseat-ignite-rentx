@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { Repository } from 'typeorm';
 import { AppDataSource } from '../../../../../shared/infra/typeorm/data-source';
 

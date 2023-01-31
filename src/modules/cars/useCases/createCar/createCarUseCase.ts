@@ -1,7 +1,6 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-useless-constructor */
-import { ICarsRepository } from '@modules/cars/repositories/ICarsRepository';
 import { inject, injectable } from 'tsyringe';
+
+import { ICarsRepository } from '@modules/cars/repositories/ICarsRepository';
 import { Car } from '../../infra/typeorm/entities/car';
 import { AppError } from '../../../../shared/errors/appError';
 

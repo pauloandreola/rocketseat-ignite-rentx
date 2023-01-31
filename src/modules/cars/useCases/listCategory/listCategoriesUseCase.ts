@@ -1,5 +1,5 @@
-/* eslint-disable no-useless-constructor */
 import { inject, injectable } from 'tsyringe';
+
 import { Category } from '../../infra/typeorm/entities/category';
 import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
 

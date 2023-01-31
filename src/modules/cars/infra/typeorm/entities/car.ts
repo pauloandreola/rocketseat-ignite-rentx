@@ -1,3 +1,4 @@
+import { v4 as uuidV4 } from 'uuid';
 import {
   Column,
   CreateDateColumn,
@@ -8,7 +9,7 @@ import {
   ManyToOne,
   PrimaryColumn,
 } from 'typeorm';
-import { v4 as uuidV4 } from 'uuid';
+
 import { Category } from './category';
 import { Specification } from './specification';
 

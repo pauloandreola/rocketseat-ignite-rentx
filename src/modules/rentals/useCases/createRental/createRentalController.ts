@@ -1,6 +1,6 @@
-/* eslint-disable class-methods-use-this */
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
+
 import { CreateRentalUseCase } from './createRentalUseCase';
 
 export class CreateRentalController {

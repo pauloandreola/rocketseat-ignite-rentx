@@ -1,5 +1,5 @@
-/* eslint-disable no-useless-constructor */
 import { inject, injectable } from 'tsyringe';
+
 import { ISpecificationsRepository } from '@modules/cars/repositories/ISpecificationsRepository';
 import { Car } from '@modules/cars/infra/typeorm/entities/car';
 import { ICarsRepository } from '../../repositories/ICarsRepository';

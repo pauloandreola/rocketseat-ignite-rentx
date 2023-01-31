@@ -1,9 +1,7 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-useless-constructor */
+import { inject, injectable } from 'tsyringe';
 import { parse } from 'csv-parse';
 import * as fs from 'fs';
 
-import { inject, injectable } from 'tsyringe';
 import { ISpecificationsRepository } from '../../repositories/ISpecificationsRepository';
 
 interface IImportSpecification {

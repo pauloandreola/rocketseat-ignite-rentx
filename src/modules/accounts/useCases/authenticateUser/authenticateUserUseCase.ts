@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-constructor */
 import { inject, injectable } from 'tsyringe';
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';

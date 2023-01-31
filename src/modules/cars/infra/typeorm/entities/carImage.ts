@@ -1,3 +1,4 @@
+import { v4 as uuidV4 } from 'uuid';
 import {
   Column,
   CreateDateColumn,
@@ -6,7 +7,7 @@ import {
   ManyToMany,
   PrimaryColumn,
 } from 'typeorm';
-import { v4 as uuidV4 } from 'uuid';
+
 import { Car } from './car';
 
 @Entity('cars_images')

@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import { ICreateSpecificationDTO } from '../../dtos/ICreateSpecificationDTO';
 import { Specification } from '../../infra/typeorm/entities/specification';
 import { ISpecificationsRepository } from '../ISpecificationsRepository';

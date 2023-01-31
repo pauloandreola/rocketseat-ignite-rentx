@@ -1,5 +1,5 @@
-/* eslint-disable no-useless-constructor */
 import { inject, injectable } from 'tsyringe';
+
 import { AppError } from '../../../../shared/errors/appError';
 import { ICreateSpecificationDTO } from '../../dtos/ICreateSpecificationDTO';
 import { ISpecificationsRepository } from '../../repositories/ISpecificationsRepository';

@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
-/* eslint-disable class-methods-use-this */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
 export class createCategories1670381378857 implements MigrationInterface {

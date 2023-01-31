@@ -1,5 +1,5 @@
-/* eslint-disable no-useless-constructor */
 import { inject, injectable } from 'tsyringe';
+
 import { Specification } from '../../infra/typeorm/entities/specification';
 import { ISpecificationsRepository } from '../../repositories/ISpecificationsRepository';
 
