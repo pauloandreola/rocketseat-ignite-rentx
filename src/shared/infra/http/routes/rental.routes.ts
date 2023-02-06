@@ -1,7 +1,6 @@
 import { Router } from 'express';
-import multer from 'multer';
 
-import { CreateRentalController } from '@modules/rentals/useCases/createRental/createRentalController';
+import { CreateRentalController } from 'modules/rentals/useCases/createRental/createRentalController';
 import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 
 export const rentalRoutes = Router();

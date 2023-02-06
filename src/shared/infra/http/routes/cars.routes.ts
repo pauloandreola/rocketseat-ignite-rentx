@@ -2,10 +2,10 @@ import { Router } from 'express';
 import multer from 'multer';
 
 import uploadConfig from '@config/uploads';
-import { CreateCarController } from '@modules/cars/useCases/createCar/createCarController';
-import { ListAvailableCarsController } from '@modules/cars/useCases/listCars/listAvailableCarsController';
-import { CreateCarSpecificationController } from '@modules/cars/useCases/createCarSpecification/createCarSpecificationController';
-import { UploadCarImagesController } from '@modules/cars/useCases/uploadCarImages/uploadCarImagesController';
+import { CreateCarController } from '../../../../modules/cars/useCases/createCar/createCarController';
+import { ListAvailableCarsController } from '../../../../modules/cars/useCases/listCars/listAvailableCarsController';
+import { CreateCarSpecificationController } from '../../../../modules/cars/useCases/createCarSpecification/createCarSpecificationController';
+import { UploadCarImagesController } from '../../../../modules/cars/useCases/uploadCarImages/uploadCarImagesController';
 
 import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 import { ensureAdmin } from '../middlewares/ensureAdmin';
@@ -29,7 +29,12 @@ carsRoutes.post(
   uploadCarImagesController.handle,
 );
 
-carsRoutes.post('/specifications/:id', createCarSpecificationController.handle);
+carsRoutes.post(
+  '/specifications/:id',
+  ensureAuthenticated,
+  ensureAdmin,
+  createCarSpecificationController.handle,
+);
 
 carsRoutes.post(
   '/',
