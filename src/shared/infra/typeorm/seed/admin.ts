@@ -1,8 +1,8 @@
-/* eslint-disable no-console */
 import { v4 as uuidV4 } from 'uuid';
 import { hash } from 'bcryptjs';
 
-import createConnection from '../index';
+import createConnection from '@shared/infra/typeorm';
+// import createConnection from '../index';
 
 async function create() {
   const connection = createConnection('localhost');

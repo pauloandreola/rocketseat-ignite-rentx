@@ -1,12 +1,12 @@
-/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import 'reflect-metadata';
 import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors';
 import swaggerUi from 'swagger-ui-express';
 
+// import { createConnection } from '../typeorm';
 import 'shared/container';
 import { AppError } from '@shared/errors/appError';
-import createConnection from '@shared/infra/typeorm';
 
 import { router } from './routes';
 import swaggerFile from '../../../swagger.json';
