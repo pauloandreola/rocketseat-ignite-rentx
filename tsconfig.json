@@ -22,7 +22,6 @@
      "skipLibCheck": true,
      "forceConsistentCasingInFileNames": true,
      "resolveJsonModule": true,
-
      "moduleResolution": "node",
      "outDir": "./build",
      "sourceMap": true,

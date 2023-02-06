@@ -20,7 +20,7 @@ services:
     restart: always
     
     ports:
-      - 3001:3001
+      - 3000:3000
       - 9300:9300
     volumes:
       - .:/usr/app
