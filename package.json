@@ -12,7 +12,7 @@
     "generate": "typeorm migration:generate -n PostRefactoring",
     "migrate": "ts-node-dev ./node_modules/typeorm/cli.js migration:run -d src/shared/infra/typeorm/data-source.ts",
     "revert": "npx typeorm-ts-node-commonjs migration:revert -d src/data-source",
-    "test": "jest"
+    "test": "set NODE_ENV=tes&&jest --runInBand --detectOpenHandles"
     
   },
   "repository": {
@@ -36,6 +36,7 @@
     "multer": "^1.4.5-lts.1",
     "pg": "^8.8.0",
     "reflect-metadata": "^0.1.13",
+    "supertest": "^6.3.3",
     "swagger-ui-express": "^4.5.0",
     "tsyringe": "^4.7.0",
     "typeorm": "^0.3.11",
@@ -64,7 +65,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "jest": "^29.2.2",
     "prettier": "^2.7.1",
-    "supertest": "^6.3.3",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
