@@ -23,11 +23,11 @@ export class SpecificationsRepositoryInMemory
   }
 
   async findByIds(ids: string[]): Promise<Specification[]> {
-    const allSpecifications = this.specifications.filter(specifications =>
+    const all_specifications = this.specifications.filter(specifications =>
       ids.includes(specifications.id),
     );
 
-    return allSpecifications;
+    return all_specifications;
   }
 
   async findByName(name: string): Promise<Specification> {
@@ -37,6 +37,7 @@ export class SpecificationsRepositoryInMemory
   }
 
   async list(): Promise<Specification[]> {
-    throw new Error('Method not implemented.');
+    const all_specifications = this.specifications;
+    return all_specifications;
   }
 }

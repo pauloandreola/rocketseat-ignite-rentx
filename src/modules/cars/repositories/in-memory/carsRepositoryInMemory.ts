@@ -1,5 +1,5 @@
-import { ICreateCarDTO } from '../../dtos/ICreateCarDTO';
 import { Car } from '../../infra/typeorm/entities/car';
+import { ICreateCarDTO } from '../../dtos/ICreateCarDTO';
 import { ICarsRepository } from '../ICarsRepository';
 
 export class CarsRepositoryInMemory implements ICarsRepository {
@@ -55,7 +55,7 @@ export class CarsRepositoryInMemory implements ICarsRepository {
     category_id?: string,
     name?: string,
   ): Promise<Car[]> {
-    const all_Cars = this.cars.filter(car => {
+    const all_cars = this.cars.filter(car => {
       if (
         car.available === true ||
         (brand && car.brand === brand) ||
@@ -67,7 +67,7 @@ export class CarsRepositoryInMemory implements ICarsRepository {
       return null;
     });
 
-    return all_Cars;
+    return all_cars;
   }
 
   async findById(id: string): Promise<Car> {
@@ -79,10 +79,11 @@ export class CarsRepositoryInMemory implements ICarsRepository {
   }
 
   async findByName(name: string): Promise<Car> {
-    throw new Error('Method not implemented.');
+    return this.cars.find(car => car.name === name);
   }
 
-  list(): Promise<Car[]> {
-    throw new Error('Method not implemented.');
+  async list(): Promise<Car[]> {
+    const all_cars = this.cars;
+    return all_cars;
   }
 }

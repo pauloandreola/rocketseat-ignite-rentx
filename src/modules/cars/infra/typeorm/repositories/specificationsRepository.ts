@@ -12,11 +12,6 @@ export class SpecificationsRepository implements ISpecificationsRepository {
     this.repository = AppDataSource.getRepository(Specification);
   }
 
-  async findByIds(ids: string[]): Promise<Specification[]> {
-    const specifications = await this.repository.findByIds(ids);
-    return specifications;
-  }
-
   async create({
     name,
     description,
@@ -31,6 +26,11 @@ export class SpecificationsRepository implements ISpecificationsRepository {
   async findById(id: string): Promise<Specification> {
     const specification = await this.repository.findOneBy({ id });
     return specification;
+  }
+
+  async findByIds(ids: string[]): Promise<Specification[]> {
+    const specifications = await this.repository.findByIds(ids);
+    return specifications;
   }
 
   async findByName(name: string): Promise<Specification> {

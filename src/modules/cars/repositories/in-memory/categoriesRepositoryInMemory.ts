@@ -25,7 +25,7 @@ export class CategoriesRepositoryInMemory implements ICategoriesRepository {
   }
 
   async list(): Promise<Category[]> {
-    const all = this.categories;
-    return all;
+    const all_categories = this.categories;
+    return all_categories;
   }
 }
