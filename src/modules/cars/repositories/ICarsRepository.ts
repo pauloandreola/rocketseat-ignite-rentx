@@ -12,4 +12,5 @@ export interface ICarsRepository {
   findByLicensePlate(license_plate: string): Promise<Car>;
   findByName(name: string): Promise<Car>;
   list(): Promise<Car[]>;
+  updateAvailable(id: string, available: boolean): Promise<void>;
 }
