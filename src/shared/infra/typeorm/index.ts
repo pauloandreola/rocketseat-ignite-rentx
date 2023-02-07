@@ -1,6 +1,6 @@
 import { Connection, createConnection, getConnectionOptions } from 'typeorm';
 
-// Removido pela Dani no capítulo IV - Carros - Creiando seed de usuário
+// Removido pela Dani no capítulo IV - Carros - Criando seed de usuário
 // interface IOptions {
 //   host: string;
 // }
@@ -16,7 +16,11 @@ export default async (host: 'localhost'): Promise<Connection> => {
 
   return createConnection(
     Object.assign(defaultOptions, {
-      host,
+      host: process.env.NODE_ENV === 'test' ? 'localhost' : host,
+      database:
+        process.env.NODE_ENV === 'test'
+          ? 'rentx_test'
+          : defaultOptions.database,
     }),
   );
 };
