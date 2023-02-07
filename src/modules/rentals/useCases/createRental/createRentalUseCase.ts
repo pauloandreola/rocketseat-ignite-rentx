@@ -5,7 +5,7 @@ import { IDateProvider } from '@shared/container/providers/dateProvider/IDatePro
 import { IRentalsRepository } from '../../repositories/IRentalsRepository';
 import { AppError } from '../../../../shared/errors/appError';
 
-const minimumHour = 24;
+const minimumHoursRents = 24;
 
 interface IRequest {
   user_id: string;
@@ -40,7 +40,7 @@ export class CreateRentalUseCase {
     );
 
     if (rentalOpenToUser) {
-      throw new AppError('Theres a rental in progress for uses');
+      throw new AppError('Theres a rental in progress for user');
     }
 
     const dateNow = this.dateProvider.dateNow();
@@ -50,7 +50,7 @@ export class CreateRentalUseCase {
       expected_return_date,
     );
 
-    if (compare < minimumHour) {
+    if (compare < minimumHoursRents) {
       throw new AppError('Invalid return time');
     }
 

@@ -32,7 +32,7 @@ describe('Create Rental', () => {
     expect(rental).toHaveProperty('start_date');
   });
 
-  it('Should not be able to create a new rental if there is another open to the sane user', async () => {
+  it('Should not be able to create a new rental if there is another open to the same user', async () => {
     expect(async () => {
       await createRentalUseCase.execute({
         car_id: '121212',
@@ -48,7 +48,7 @@ describe('Create Rental', () => {
     }).rejects.toBeInstanceOf(AppError);
   });
 
-  it('Should not be able to create a new rental if there is another open to the sane car', async () => {
+  it('Should not be able to create a new rental if there is another open to the same car', async () => {
     expect(async () => {
       await createRentalUseCase.execute({
         car_id: 'test',

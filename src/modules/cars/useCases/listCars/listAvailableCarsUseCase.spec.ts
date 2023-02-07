@@ -62,7 +62,7 @@ describe('List Cars', () => {
     expect(cars).toEqual([car]);
   });
 
-  it('Should be able to list all available cars by name', async () => {
+  it('Should be able to list all available cars by category', async () => {
     const car = await carsRepositoryInMemory.create({
       name: 'Car04',
       description: 'Car_description',
