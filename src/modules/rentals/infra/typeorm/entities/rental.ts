@@ -8,8 +8,8 @@ import {
   PrimaryColumn,
 } from 'typeorm';
 
-import { User } from '@modules/accounts/infra/typeorm/entities/user';
-import { Car } from '@modules/cars/infra/typeorm/entities/car';
+import { Car } from '../../../../cars/infra/typeorm/entities/car';
+import { User } from '../../../../accounts/infra/typeorm/entities/user';
 
 @Entity('rentals')
 export class Rental {

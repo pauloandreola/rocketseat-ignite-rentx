@@ -1,6 +1,6 @@
 import { Repository } from 'typeorm';
 
-import { AppDataSource } from '@shared/infra/typeorm/data-source';
+import { AppDataSource } from '../../../../../shared/infra/typeorm/data-source';
 import { ICarsImagesRepository } from '../../../repositories/ICarsImagesRepository';
 import { CarImage } from '../entities/carImage';
 

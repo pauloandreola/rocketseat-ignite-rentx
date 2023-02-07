@@ -1,7 +1,7 @@
 import { inject, injectable } from 'tsyringe';
 
-import { ISpecificationsRepository } from '@modules/cars/repositories/ISpecificationsRepository';
-import { Car } from '@modules/cars/infra/typeorm/entities/car';
+import { ISpecificationsRepository } from 'modules/cars/repositories/ISpecificationsRepository';
+import { Car } from 'modules/cars/infra/typeorm/entities/car';
 import { ICarsRepository } from '../../repositories/ICarsRepository';
 import { AppError } from '../../../../shared/errors/appError';
 

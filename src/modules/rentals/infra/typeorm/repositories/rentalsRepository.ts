@@ -1,7 +1,7 @@
 import { Repository } from 'typeorm';
 
-import { ICreateRentalDTO } from '@modules/rentals/dtos/ICreateRentalDTO';
-import { AppDataSource } from '@shared/infra/typeorm/data-source';
+import { ICreateRentalDTO } from '../../../dtos/ICreateRentalDTO';
+import { AppDataSource } from '../../../../../shared/infra/typeorm/data-source';
 import { IRentalsRepository } from '../../../repositories/IRentalsRepository';
 import { Rental } from '../entities/rental';
 
