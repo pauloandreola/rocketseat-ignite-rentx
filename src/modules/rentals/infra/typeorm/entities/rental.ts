@@ -4,6 +4,7 @@ import {
   CreateDateColumn,
   Entity,
   JoinColumn,
+  ManyToOne,
   OneToOne,
   PrimaryColumn,
 } from 'typeorm';
@@ -16,7 +17,7 @@ export class Rental {
   @PrimaryColumn()
   id?: string;
 
-  @OneToOne(() => Car)
+  @ManyToOne(() => Car)
   @JoinColumn({ name: 'car_id' })
   car: Car;
 
