@@ -5,10 +5,10 @@
   "main": "server.ts",
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn --poll src/shared/infra/http/server.ts",
-    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d src/shared/infra/typeorm/data-source.ts",
+    "typeorm OLD": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d src/shared/infra/typeorm/data-source.ts",
+    "typeorm create": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "find-deadcode": "ts-prune",
     "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts",
-    "create": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "generate": "typeorm migration:generate -n PostRefactoring",
     "migrate": "ts-node-dev ./node_modules/typeorm/cli.js migration:run -d src/shared/infra/typeorm/data-source.ts",
     "revert": "npx typeorm-ts-node-commonjs migration:revert -d src/data-source",
