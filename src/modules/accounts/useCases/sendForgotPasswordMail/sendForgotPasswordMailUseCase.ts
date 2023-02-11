@@ -5,6 +5,7 @@ import { IUsersTokensRepository } from '@modules/accounts/repositories/IUsersTok
 import { AppError } from '@shared/errors/appError';
 import { IDateProvider } from '@shared/container/providers/dateProvider/IDateProvider';
 import { IMailProvider } from '@shared/container/providers/mailProvider/IMailProvider';
+import { resolve } from 'path';
 
 @injectable()
 export class SendForgotPasswordMailUseCase {
@@ -19,6 +20,15 @@ export class SendForgotPasswordMailUseCase {
   async execute(email: string) {
     const user = await this.usersRepository.findByEmail(email);
 
+    const templatePath = resolve(
+      __dirname,
+      '..',
+      '..',
+      'views',
+      'emails',
+      'forgotPassword.hbs',
+    );
+
     if (!user) {
       throw new AppError('User does not exists');
     }
@@ -32,10 +42,16 @@ export class SendForgotPasswordMailUseCase {
       expires_date,
     });
 
+    const variables = {
+      name: user.name,
+      link: `${process.env.FORGOT_MAIL_URL}${token}`,
+    };
+
     await this.mailProvider.sendMail(
       email,
       'Password recovery',
-      `Reset link ${token}`,
+      variables,
+      templatePath,
     );
   }
 }
