@@ -4,6 +4,7 @@ import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepositor
 import { IUsersTokensRepository } from '@modules/accounts/repositories/IUsersTokensRepository';
 import { AppError } from '@shared/errors/appError';
 import { IDateProvider } from '@shared/container/providers/dateProvider/IDateProvider';
+import { IMailProvider } from '@shared/container/providers/mailProvider/IMailProvider';
 
 @injectable()
 export class SendForgotPasswordMailUseCase {
@@ -12,6 +13,7 @@ export class SendForgotPasswordMailUseCase {
     @inject('UsersTokensRepository')
     private usersTokensRepository: IUsersTokensRepository,
     @inject('DayjsDateProvider') private dateProvider: IDateProvider,
+    @inject('EtherealMailProvider') private mailProvider: IMailProvider,
   ) {}
 
   async execute(email: string) {
@@ -29,5 +31,11 @@ export class SendForgotPasswordMailUseCase {
       user_id: user.id,
       expires_date,
     });
+
+    await this.mailProvider.sendMail(
+      email,
+      'Password recovery',
+      `Reset link ${token}`,
+    );
   }
 }
