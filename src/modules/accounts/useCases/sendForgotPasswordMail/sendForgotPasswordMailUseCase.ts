@@ -1,11 +1,12 @@
 import { inject, injectable } from 'tsyringe';
 import { v4 as uuidv4 } from 'uuid';
-import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepository';
-import { IUsersTokensRepository } from '@modules/accounts/repositories/IUsersTokensRepository';
-import { AppError } from '@shared/errors/appError';
-import { IDateProvider } from '@shared/container/providers/dateProvider/IDateProvider';
-import { IMailProvider } from '@shared/container/providers/mailProvider/IMailProvider';
 import { resolve } from 'path';
+
+import { IUsersRepository } from '../../repositories/IUsersRepository';
+import { IUsersTokensRepository } from '../../repositories/IUsersTokensRepository';
+import { AppError } from '../../../../shared/errors/appError';
+import { IDateProvider } from '../../../../shared/container/providers/dateProvider/IDateProvider';
+import { IMailProvider } from '../../../../shared/container/providers/mailProvider/IMailProvider';
 
 @injectable()
 export class SendForgotPasswordMailUseCase {

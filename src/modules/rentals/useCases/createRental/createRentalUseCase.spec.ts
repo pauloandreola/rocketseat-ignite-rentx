@@ -6,10 +6,10 @@ import { AppError } from '../../../../shared/errors/appError';
 import { CarsRepositoryInMemory } from '../../../cars/repositories/in-memory/carsRepositoryInMemory';
 import { CreateRentalUseCase } from './createRentalUseCase';
 
-let carsRepositoryInMemory: CarsRepositoryInMemory;
 let createRentalUseCase: CreateRentalUseCase;
-let dayjsDateProvider: DayjsDateProvider;
 let rentalsRepositoryInMemory: RentalsRepositoryInMemory;
+let carsRepositoryInMemory: CarsRepositoryInMemory;
+let dayjsDateProvider: DayjsDateProvider;
 
 describe('Create Rental', () => {
   const dayAdd24Hours = dayjs().add(1, 'day').toDate();

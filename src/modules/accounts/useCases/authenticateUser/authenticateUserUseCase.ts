@@ -3,8 +3,7 @@ import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 
 import { IDateProvider } from 'shared/container/providers/dateProvider/IDateProvider';
-import auth from 'config/auth';
-import dayjs from 'dayjs';
+import auth from '../../../../config/auth';
 import { IUsersTokensRepository } from '../../repositories/IUsersTokensRepository';
 import { IUsersRepository } from '../../repositories/IUsersRepository';
 import { AppError } from '../../../../shared/errors/appError';

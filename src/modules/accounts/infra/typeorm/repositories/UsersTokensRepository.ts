@@ -1,9 +1,8 @@
 import { Repository } from 'typeorm';
 
-import { AppDataSource } from 'shared/infra/typeorm/data-source';
-
 import { ICreateUserTokenDTO } from 'modules/accounts/dtos/ICreateUserTokenDTO';
 import { IUsersTokensRepository } from 'modules/accounts/repositories/IUsersTokensRepository';
+import { AppDataSource } from '../../../../../shared/infra/typeorm/data-source';
 
 import { UserTokens } from '../entities/userTokens';
 
