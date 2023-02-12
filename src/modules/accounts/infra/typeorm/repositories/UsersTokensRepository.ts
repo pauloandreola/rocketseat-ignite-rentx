@@ -38,6 +38,7 @@ export class UsersTokensRepository implements IUsersTokensRepository {
       user_id,
       refresh_token,
     });
+
     return usersTokens;
   }
 
